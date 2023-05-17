@@ -1,4 +1,5 @@
 1) El proyecto backend en ASP.NET CORE correspondiente al primer punto de la prueba, se encuentra en la carpeta area
 2) El proyecto frontend correspondiente al segundo punto de la prueba, está hecho en Reactjs y se encuentra en la carpeta front-end
+2.1) Tener en cuenta ejecutar el comando npm install para que se descarguen los módulos y poder correr la app, de lo contrario solo se tendrá acceso al código fuente
 3) El archivo queries.txt contiene 2 querys correspondiente al tercer punto de la prueba
 4) El archivo codepen.txt contiene el link correspondiente a la realización del cuarto punto de la prueba
