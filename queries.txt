@@ -1,0 +1,70 @@
+
+1) 
+
+	SELECT
+		Total.CompanyName,
+		Total.TotalFreight,
+		Detalle.TotalCostShipped,
+		Detalle.TotalItemShipped
+	FROM 
+		(
+			SELECT 
+			    Sales.Shippers.companyname AS CompanyName,
+				SUM(Sales.Orders.freight) AS TotalFreight
+			FROM 
+				Sales.Orders
+			INNER JOIN
+				Sales.Shippers
+			ON
+				Sales.Shippers.shipperid = Sales.Orders.shipperid
+			GROUP BY
+				Sales.Shippers.companyname 
+		) Total
+	INNER JOIN	
+		(
+			SELECT 
+				Sales.Shippers.companyname AS CompanyName,
+				SUM(Sales.OrderDetails.unitprice * Sales.OrderDetails.qty) AS TotalCostShipped,
+				SUM(Sales.OrderDetails.qty) AS TotalItemShipped	
+			FROM 
+				Sales.Orders
+			INNER JOIN
+				Sales.Shippers
+			ON
+				Sales.Shippers.shipperid = Sales.Orders.shipperid
+			INNER JOIN 
+				Sales.OrderDetails
+			ON 
+				Sales.OrderDetails.orderid = Sales.Orders.orderid 
+			GROUP BY
+				Sales.Shippers.companyname
+		) Detalle
+	ON 
+		Total.CompanyName = Detalle.CompanyName
+	ORDER BY 
+		Total.CompanyName ASC;
+		
+				
+		
+2)
+
+	SELECT C.companyname AS CustomerName, X.LastOrderDate, DATEADD(DAY, promedioDias, LastOrderDate) AS NextPredictedOrder
+	FROM 
+		(
+			SELECT Y.custid, AVG(Y.dias_entre_ordenes) promedioDias, MAX(Y.orderdate) AS LastOrderDate 
+			FROM 
+				(
+					SELECT Z.*, DATEDIFF(DAY, orderdate, NextOrderDate) dias_entre_ordenes
+					FROM(
+							SELECT orderid, custid, orderdate,   
+								CASE WHEN LEAD(OrderDate, 1, 0) OVER (PARTITION BY custid ORDER BY orderid) = '1900-01-01' THEN  orderdate 
+								  ELSE 
+									LEAD(OrderDate, 1, 0) OVER (PARTITION BY custid ORDER BY orderid)  
+								END NextOrderDate
+							FROM Sales.Orders 
+					) Z 
+				) Y GROUP BY Y.custid
+		) X INNER JOIN Sales.Customers C
+			ON X.custid = c.custid
+			ORDER BY CustomerName
+			

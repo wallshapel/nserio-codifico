@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+html, body {
+	font-family: Abel, Arial, Verdana, sans-serif;
+}
+
+h1 {
+	font-size: 3em;
+	text-align: center;	
+}
+
+.center-content {
+    margin: auto;
+    display: block;
+    float: none;
+    width: 600px;
+}
+
+form .search__form {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+}
+
+form .search__form input {
+    padding: 10px; 
+    outline: none; 
+    border-radius: 15px;
+    padding-right: 60px; 
+}
+
+form .search__form > .i {
+    position: absolute;
+    margin-left: 85%;
+
+}
+
+.search__form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.card_item {
+    display: flex;
+    width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #FFFFFFFF;
+
+}
+
+.green-bg {
+    background-color: #648373ab;
+    text-align: center;
+    width: 40%;
+    padding: 40px 0px !important;
+}
+
+.green-bg .created_at {
+    background-color: #77999d;
+    border-radius: 20px;
+    text-align: center;
+    color: #FFFFFFFF;
+    padding: 5px 20px;
+    display: inline-block;
+    margin: auto;
+    font-size: 12px;
+}
+
+.card_item > div {
+    padding: 10px;
+}
+
+.card_item .green-bg img{
+    max-width: 140px;
+    margin: auto;
+    display: block;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.blue-bg {
+   	background: linear-gradient(#566b92, #6aa4ca);
+   	text-align: center;
+   	width: 60%;
+   	display: flex;
+   	flex-direction: column;
+   	align-content: center;
+   	padding: 1px 35px 0px 0px !important;
+}
+
+.blue-bg h1 {
+	font-size: 30px;
+}
+
+.blue-bg ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-weight: bold;
+}
+
+.blue-bg ul b {
+    display: block;   
+}
+
+.blue-bg ul p {
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.blue-bg a {
+    color: #FFFFFFFF;
+    opacity: .8;
+}
+
+.error {
+    text-align: center;
+    color: #FF0000FF;
+}

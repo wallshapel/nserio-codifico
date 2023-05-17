@@ -1,0 +1,15 @@
+D:\Documentos\ASP.NET\prueba\area\bin\Debug\net6.0\area.exe
+D:\Documentos\ASP.NET\prueba\area\bin\Debug\net6.0\area.deps.json
+D:\Documentos\ASP.NET\prueba\area\bin\Debug\net6.0\area.runtimeconfig.json
+D:\Documentos\ASP.NET\prueba\area\bin\Debug\net6.0\area.dll
+D:\Documentos\ASP.NET\prueba\area\bin\Debug\net6.0\area.pdb
+D:\Documentos\ASP.NET\prueba\area\obj\Debug\net6.0\area.csproj.AssemblyReference.cache
+D:\Documentos\ASP.NET\prueba\area\obj\Debug\net6.0\area.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\ASP.NET\prueba\area\obj\Debug\net6.0\area.AssemblyInfoInputs.cache
+D:\Documentos\ASP.NET\prueba\area\obj\Debug\net6.0\area.AssemblyInfo.cs
+D:\Documentos\ASP.NET\prueba\area\obj\Debug\net6.0\area.csproj.CoreCompileInputs.cache
+D:\Documentos\ASP.NET\prueba\area\obj\Debug\net6.0\area.dll
+D:\Documentos\ASP.NET\prueba\area\obj\Debug\net6.0\refint\area.dll
+D:\Documentos\ASP.NET\prueba\area\obj\Debug\net6.0\area.pdb
+D:\Documentos\ASP.NET\prueba\area\obj\Debug\net6.0\area.genruntimeconfig.cache
+D:\Documentos\ASP.NET\prueba\area\obj\Debug\net6.0\ref\area.dll
